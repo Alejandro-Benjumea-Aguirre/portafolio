@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  ></meta>
+
+  <title>Alejandro - Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    emailjs.init("-oyOGRIKDX8cTcViu");
+  </script>
+
+  style
+</head>
+
+<body>
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <img
+            src="./assets/image/Alejandro.png"
+            alt="logo"
+            class="h-10 w-10 object-contain rounded-full border-2 border-[#2196f3] shadow-sm"
+          >
+
+          <a
+            href="#inicio"
+            class="ml-2 text-2xl font-bold text-[#0d47a1] hover:text-[#2196f3] transition-colors"
+          >Alejandro</a>
+        </div>
+
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8 cursor-pointer">
+            <a
+              href="#inicio"
+              class="font-bold text-[#0d47a1] hover:text-[#2196f3] px-3 py-2 rounded-md transition-colors"
+            >Inicio</a>
+
+            <a
+              href="#proyectos"
+              class="font-bold text-[#0d47a1] hover:text-[#2196f3] px-3 py-2 rounded-md transition-colors"
+            >Proyectos</a>
+
+            <a
+              href="#blogs"
+              class="font-bold text-[#0d47a1] hover:text-[#2196f3] px-3 py-2 rounded-md transition-colors"
+            >Blogs</a>
+
+            <a
+              href="#contacto"
+              class="font-bold text-[#0d47a1] hover:text-[#2196f3] px-3 py-2 rounded-md transition-colors"
+            >Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section
+      id="inicio"
+      class="section-offset bg-[#e3f2fd] flex flex-col items-center justify-center h-screen text-center"
+    >
+      <!-- Foto/GIF circular -->
+
+      <div class="mb-6">
+        <img
+          src="./assets/image/Alejandro.gif"
+          alt="Foto de Alejandro"
+          class="h-40 w-40 object-cover rounded-full border-4 border-[#2196f3] shadow-lg"
+        >
+      </div>
+
+      <!-- Texto principal -->
+
+      <h1 class="text-5xl font-bold fade-in-up">
+        Hola, soy
+
+        <b class="text-[#2196f3]">Alejandro</b>
+      </h1>
+
+      <p class="mt-4 text-xl text-gray-600 fade-in delay-1">
+        Ingeniero de Desarrollo | Desarrollador Backend & Frontend
+      </p>
+
+      <!-- Sobre mí -->
+
+      <h2 class="text-3xl font-semibold mb-6 fade-in-up mt-6">Sobre mí</h2>
+
+      <p class="w-[600px] text-gray-700 leading-relaxed fade-in delay-1">
+        Soy un desarrollador apasionado por diseñar y construir soluciones tecnológicas eficientes y escalables.
+        Tengo experiencia en
+
+        <b class="text-[#2196f3]">
+          PHP, JavaScript, React y Node.js,
+        </b>
+
+        aplicados principalmente en proyectos de
+
+        <b class="text-[#2196f3]">
+          soporte, desarrollo de software para el sector salud y facturación electrónica.
+        </b>
+
+        Me caracterizo por una mentalidad de mejora continua y la motivación de aprender e implementar nuevas tecnologías que generen impacto real.
+      </p>
+    </section>
+
+    <section
+      id="proyectos"
+      class="section-offset bg-[#90caf9] h-screen py-20 px-6"
+    >
+      <h2 class="text-3xl font-semibold text-center mb-10 animate-on-scroll">Proyectos</h2>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="p-6 border rounded-lg shadow-lg bg-gray-100 hover-scale animate-on-scroll flex flex-col items-center text-center w-fit mx-auto">
+          <img
+            src="./assets/image/Alejandro.png"
+            alt="imagen del proyecto"
+            class="h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
+          >
+
+          <h3 class="text-xl font-bold mb-2 mt-4">Proyecto 1</h3>
+
+          <p class="text-gray-600">
+            Descripción breve del proyecto.
+          </p>
+        </div>
+
+        <div class="p-6 border rounded-lg shadow-lg bg-gray-100 hover-scale animate-on-scroll flex flex-col items-center text-center w-fit mx-auto">
+          <img
+            src="./assets/image/Alejandro.png"
+            alt="imagen del proyecto"
+            class="h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
+          >
+
+          <h3 class="text-xl font-bold mb-2 mt-4">Proyecto 2</h3>
+
+          <p class="text-gray-600">
+            Descripción breve del proyecto.
+          </p>
+        </div>
+
+        <div class="p-6 border rounded-lg shadow-lg bg-gray-100 hover-scale animate-on-scroll flex flex-col items-center text-center w-fit mx-auto">
+          <img
+            src="./assets/image/Alejandro.png"
+            alt="imagen del proyecto"
+            class="h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
+          >
+
+          <h3 class="text-xl font-bold mb-2 mt-4">Proyecto 3</h3>
+
+          <p class="text-gray-600">
+            Descripción breve del proyecto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="blogs"
+      class="section-offset bg-[#2196f3] h-auto py-20 px-6"
+    >
+      <h2 class="text-3xl font-semibold text-center mb-10 animate-on-scroll">Blogs</h2>
+
+      <div
+        id="div_posts"
+        class="grid md:grid-cols-4 gap-10 max-w-7xl mx-auto"
+      ></div>
+    </section>
+  </main>
+
+  <footer
+    id="contacto"
+    class="section-offset bg-[#e3f2fd] h-screen flex flex-col items-center justify-center text-center"
+  >
+    <div
+      class="overlay"
+      id="loadingOverlay"
+    >
+      <div class="loader"></div>
+    </div>
+
+    <section class="py-20 px-6">
+      <h2 class="text-3xl font-semibold text-center mb-6 animate-on-scroll">Contáctame</h2>
+
+      <p class="w-[600px] text-gray-700 text-center animate-on-scroll mt-4 mb-6">
+        Si deseas contactarte conmigo, por favor déjame una breve descripción en el mensaje junto con tu número
+        telefónico o correo electrónico. De esta manera podré responderte a la mayor brevedad posible.
+      </p>
+
+      <form
+        class="max-w-lg mx-auto flex flex-col gap-4 animate-on-scroll"
+        id="contactForm"
+      >
+        <input
+          id="nombre"
+          type="text"
+          placeholder="Nombre"
+          class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2196f3]"
+          required="required"
+        ></input>
+
+        <input
+          id="correo"
+          type="email"
+          placeholder="Correo"
+          class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2196f3]"
+          required="required"
+        ></input>
+
+        <textarea
+          id="descripcion"
+          placeholder="Mensaje"
+          class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2196f3] min-h-32"
+          required="required"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="bg-[#0d47a1] text-white text-lg p-2 rounded-lg hover:bg-blue-600 transition-colors duration-300"
+        >Enviar</button>
+      </form>
+    </section>
+
+    <section class="w-full bg-[#0d47a1] text-sm text-white text-center py-2 border-t border-blue-800 mt-auto">
+      <p>
+        Creado por Alejandro Benjumea Aguirre - 2025 ℗
+      </p>
+    </section>
+  </footer>
+
+  <script>
+    // JavaScript para animaciones al hacer scroll
+      function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        
+        elements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 150;
+          
+          if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add('visible');
+          }
+        });
+      }
+      
+      // Ejecutar al cargar la página y al hacer scroll
+      window.addEventListener('scroll', handleScrollAnimations);
+      window.addEventListener('load', handleScrollAnimations);
+      // Manejo del formulario
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        document.getElementById("loadingOverlay").classList.add("active");
+        
+        emailjs.send("service_7sl49ap", "template_wdt7gon", {
+          correo: document.getElementById("correo").value,
+          nombre: document.getElementById("nombre").value,
+          descripcion: document.getElementById("descripcion").value
+        })
+        .then(function() {
+          document.getElementById("loadingOverlay").classList.remove("active");
+          Swal.fire({
+            title: "Correo enviado",
+            text: "¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.",
+            icon: "success"
+          });
+          
+        }, function(error) {
+          console.warning(error)
+          document.getElementById("loadingOverlay").classList.remove("active");
+          Swal.fire({
+            title: "Error en el envio",
+            text: "Se presento un error en el envio del correo electronico.",
+            icon: "error"
+          });
+          
+        });
+        
+        
+        // Limpiar formulario
+        this.reset();
+      });
+      
+      // Smooth scroll para navegación (si agregas menú de navegación)
+      document.addEventListener('click', function(e) {
+        if (e.target.matches('a[href^="#"]')) {
+          e.preventDefault();
+          const targetId = e.target.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+
+      const endpoint = "https://gql.hashnode.com"; // cambia al tuyo
+
+      const query = `
+      query Publication {
+            publication(host: "alejodev.hashnode.dev") {
+                isTeam
+                title
+                posts(first: 10) {
+                    edges {
+                        node {
+                          id
+                          coverImage {
+                            url
+                            photographer
+                          }
+                          bannerImage{
+                            url
+                          }
+                          publishedAt
+                          title
+                          brief
+                          url
+                          publishedAt
+                        }
+                    }
+                }
+            }
+        }
+      `;
+
+      fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query
+        })
+      })
+        .then(res => res.json())
+        .then(data => {
+
+          const posts = data.data.publication.posts.edges;
+
+          const container = document.getElementById("div_posts");
+
+          posts.forEach((post) => {
+            post = post.node;
+            const postEl = document.createElement("div");
+            postEl.classList.add('h-auto','border','rounded-lg', 'shadow-lg','bg-[#e3f2fd]','hover-scale','animate-on-scroll','flex','flex-col','items-centerw-fit','items-center','justify-around','mx-auto')
+            let image = post.coverImage?.url ?? './assets/image/default_doc.png'
+            postEl.innerHTML = `
+              <div class="p-3">
+                <img src="${image}" alt="imagen del blog"
+                    class="h-40 w-60 object-cover rounded-md border-4 border-[#2196f3] shadow-lg text-center card-img">
+                
+              </div>
+              <div class="pt-2 pb-2 pr-4 pl-4">
+                <h3 class="text-xl font-bold mb-2 text-center line-clamp-3">${post.title}</h3>
+                <p class="text-gray-800 line-clamp-3 text-start">${post.brief}</p>
+              </div>
+              <div class="w-full border-t border-[#2196f3] items-center justify-around text-center h-[80px]">
+                <button type="button" onclick="redirectPost('${post.url}')"
+                  class="bg-[#e3f2fd] mt-4 border-2 border-[#2196f3] text-[#2196f3] hover:text-white text-lg p-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 shadow-lg">
+                  Ir al post
+                </button>
+              </div>
+            `;
+            container.appendChild(postEl);
+          });
+        })
+        .catch(err => console.error("Error:", err));
+
+      function redirectPost(url) {
+        window.open(url, "_blank");
+      }
+  </script>
+</body>
+</html>
