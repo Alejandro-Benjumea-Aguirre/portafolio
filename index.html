@@ -11,6 +11,9 @@
   <title>Alejandro - Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -18,7 +21,59 @@
     emailjs.init("-oyOGRIKDX8cTcViu");
   </script>
 
-  style
+  <style>
+    /* ── Imágenes modo claro/oscuro ── */
+    .img-dark                              { display: none; }
+    html.dark .img-light                   { display: none; }
+    html.dark .img-dark                    { display: block; }
+
+    /* ── Dark mode overrides ── */
+    html.dark nav                          { background-color: #1e1e2e !important; }
+    html.dark #inicio                      { background-color: #121220 !important; }
+    html.dark #proyectos                   { background-color: #1a1a2e !important; }
+    html.dark #blogs                       { background-color: #1e1e2e !important; }
+    html.dark #contacto                    { background-color: #121220 !important; }
+    html.dark footer section:last-child    { background-color: #0d0d1a !important; }
+
+    html.dark .bg-gray-100                 { background-color: #2a2a3e !important; }
+    html.dark .bg-\[#e3f2fd\]             { background-color: #2a2a3e !important; }
+
+    /* ── Cards de blog (generadas dinámicamente) ── */
+    html.dark #div_posts > div             { background-color: #2a2a3e !important; border-color: #3a3a5e !important; }
+    html.dark #div_posts h3               { color: #e2e8f0 !important; }
+    html.dark #div_posts p                { color: #b0b8cc !important; }
+    html.dark #div_posts button           { background-color: #1e1e3a !important; color: #90caf9 !important; border-color: #90caf9 !important; }
+    html.dark #div_posts button:hover     { background-color: #2196f3 !important; color: #ffffff !important; }
+    html.dark #div_posts .border-t        { border-color: #3a3a6e !important; }
+
+    html.dark .text-gray-600,
+    html.dark .text-gray-700,
+    html.dark .text-gray-800              { color: #b0b8cc !important; }
+
+    html.dark a.font-bold                  { color: #90caf9 !important; }
+    html.dark h1, html.dark h2,
+    html.dark h3                           { color: #e2e8f0 !important; }
+    html.dark p                            { color: #b0b8cc; }
+
+    html.dark input,
+    html.dark textarea                     { background-color: #2a2a3e; color: #e2e8f0; border-color: #4a4a6e; }
+
+    /* Botón toggle */
+    #darkModeToggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid #2196f3;
+      border-radius: 9999px;
+      padding: 4px 12px;
+      font-size: 1.1rem;
+      transition: background 0.2s, color 0.2s;
+      color: #0d47a1;
+    }
+    html.dark #darkModeToggle {
+      border-color: #90caf9;
+      color: #90caf9;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,6 +114,8 @@
               href="#contacto"
               class="font-bold text-[#0d47a1] hover:text-[#2196f3] px-3 py-2 rounded-md transition-colors"
             >Contacto</a>
+
+            <button id="darkModeToggle" onclick="toggleDarkMode()" title="Cambiar tema">☀️</button>
           </div>
         </div>
       </div>
@@ -123,29 +180,39 @@
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div class="p-6 border rounded-lg shadow-lg bg-gray-100 hover-scale animate-on-scroll flex flex-col items-center text-center w-fit mx-auto">
           <img
-            src="./assets/image/Alejandro.png"
+            src="./assets/image/kardex_api_light.png"
             alt="imagen del proyecto"
-            class="h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
+            class="img-light h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
+          >
+          <img
+            src="./assets/image/kardex_api_dark.png"
+            alt="imagen del proyecto"
+            class="img-dark h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
           >
 
-          <h3 class="text-xl font-bold mb-2 mt-4">Proyecto 1</h3>
+          <h3 class="text-xl font-bold mb-2 mt-4">Kardex (API)</h3>
 
           <p class="text-gray-600">
-            Descripción breve del proyecto.
+            API REST para la gestión integral de ventas, compras, inventario y flujo de caja. Permite registrar movimientos de stock, generar reportes financieros y controlar el ciclo completo de operaciones comerciales.
           </p>
         </div>
 
         <div class="p-6 border rounded-lg shadow-lg bg-gray-100 hover-scale animate-on-scroll flex flex-col items-center text-center w-fit mx-auto">
           <img
-            src="./assets/image/Alejandro.png"
+            src="./assets/image/kardex_web_light.png"
             alt="imagen del proyecto"
-            class="h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
+            class="img-light h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
+          >
+          <img
+            src="./assets/image/kardex_web.png"
+            alt="imagen del proyecto"
+            class="img-dark h-40 w-40 object-cover rounded-md border-4 border-[#2196f3] shadow-lg"
           >
 
-          <h3 class="text-xl font-bold mb-2 mt-4">Proyecto 2</h3>
+          <h3 class="text-xl font-bold mb-2 mt-4">Kardex Web</h3>
 
           <p class="text-gray-600">
-            Descripción breve del proyecto.
+            Aplicación web para la gestión integral de ventas, compras, inventario y flujo de caja. Ofrece un panel intuitivo para registrar transacciones, controlar stock en tiempo real y visualizar reportes financieros que facilitan la toma de decisiones del negocio.
           </p>
         </div>
 
@@ -382,6 +449,28 @@
       function redirectPost(url) {
         window.open(url, "_blank");
       }
+
+      // Dark mode toggle
+      function toggleDarkMode() {
+        const html = document.documentElement;
+        const btn = document.getElementById('darkModeToggle');
+        const isDark = html.classList.toggle('dark');
+        btn.textContent = isDark ? '🌙' : '☀️';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      }
+
+      // Restaurar preferencia al cargar
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+          document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('darkModeToggle');
+            if (btn) btn.textContent = '🌙';
+          });
+        }
+      })();
   </script>
 </body>
 </html>
